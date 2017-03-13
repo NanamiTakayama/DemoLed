@@ -2,7 +2,7 @@
 import RPi.GPIO as GPIO
 import time
 import commands
-
+import os
 pum = 12
 count = 5
 print("____APP Started____")
@@ -13,6 +13,7 @@ print(str(commands.getoutput("ls /var/isaax/project/")))
 print(str(commands.getoutput("ps aux | grep app")))
 print(count)
 while True:
+    print(os.environ['TIMESLEEP'])
     GPIO.output(pum, True)
     #print(str(commands.getoutput("ls /var/isaax/project/")))
     #print("LED is ON!")
