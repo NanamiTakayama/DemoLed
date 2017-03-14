@@ -4,7 +4,7 @@ import time
 import commands
 
 pum = 12
-count = 30
+count = 0.5
 print("____APP Started____")
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
@@ -16,7 +16,7 @@ GPIO.setup(pum, GPIO.OUT)
 while True:
     GPIO.output(pum, True)
     #print(str(commands.getoutput("ls /var/isaax/project/")))
-    print("LED is ON!")
+    #print("LED is ON!")
     time.sleep(count)
     GPIO.output(pum, False)
     #GPIO.output(11, False)
