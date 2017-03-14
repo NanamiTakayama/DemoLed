@@ -5,17 +5,17 @@ import commands
 import os
 
 pum = 12
-count = 5
+count = 10
 print("____APP Started____")
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
 GPIO.setup(pum, GPIO.OUT)
-print(str(commands.getoutput("ls /var/isaax/project/")))
-print(str(commands.getoutput("ps aux | grep app")))
-print(count)
+#print(str(commands.getoutput("ls /var/isaax/project/")))
+#print(str(commands.getoutput("ps aux | grep app")))
+#print(count)
 
 while True:
-    #print(os.environ['TIMESLEEP'])
+    print(os.environ[‘TIMESLEEP’])
     GPIO.output(pum, True)
     #print(str(commands.getoutput("ls /var/isaax/project/")))
     #print("LED is ON!")
