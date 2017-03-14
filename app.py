@@ -5,7 +5,7 @@ import commands
 import os
 
 pum = 12
-count = 10
+count = 15
 print("____APP Started____")
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
@@ -15,14 +15,14 @@ GPIO.setup(pum, GPIO.OUT)
 #print(count)
 
 while True:
-    print(os.environ[‘TIMESLEEP’])
+    #print(os.environ[‘TIMESLEEP’])
     GPIO.output(pum, True)
     #print(str(commands.getoutput("ls /var/isaax/project/")))
-    #print("LED is ON!")
+    print("LED is ON!")
     time.sleep(count)
     GPIO.output(pum, False)
     #GPIO.output(11, False)
-    #print("LED is OFF!")
+    print("LED is OFF!")
     time.sleep(count)
     #print("_____SYSTEMCTL_____")
     #print(str(commands.getoutput("systemctl status isaax-agent.service")))
