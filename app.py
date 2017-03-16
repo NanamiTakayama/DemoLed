@@ -14,7 +14,7 @@ GPIO.setup(pum, GPIO.OUT)
 #print(count)
 
 while True:
-    print("Poling for each" + str(count) "secounds")
+    print("Poling for each" + str(count) + "secounds")
     GPIO.output(pum, True)
     #print(str(commands.getoutput("ls /var/isaax/project/")))
     #print("LED is ON!")
